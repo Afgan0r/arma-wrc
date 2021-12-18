@@ -1,0 +1,21 @@
+class CfgFunctions {
+	class WRC {
+		class profileVariables {
+			class initializeTeamValues {};
+			class setValueToTeam {};
+			class getValueFromTeam {};
+			class getTeamVariableName {};
+		}
+		class settings {
+			class getSettingValue {};
+		}
+		class timer {
+			class WPActivate {};
+		}
+		class utils {
+			class getSectorNumber {};
+			class getTeamNumber {};
+			class getWPNumber {};
+		}
+	}
+}
