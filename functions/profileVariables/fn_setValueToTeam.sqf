@@ -11,3 +11,4 @@ if (isNil { _teamValue }) then {
 _teamValue set [_variableName, _value];
 
 profileNamespace setVariable [_teamVariableName, _teamValue];
+saveProfileNamespace;
