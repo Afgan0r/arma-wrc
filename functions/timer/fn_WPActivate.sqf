@@ -15,8 +15,7 @@ if (_isStart) then {
 };
 
 if (!(_isStart || _isFinish)) then {
-	_waypointNumber = [_trigger] call WRC_fnc_getWPNumber;
-	[_vehiclesList, _waypointNumber] call WRC_fnc_WPPassed;
+	[_trigger, _vehiclesList] call WRC_fnc_WPPassed;
 };
 
 if (_isFinish) then {

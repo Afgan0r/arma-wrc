@@ -1,9 +1,24 @@
-params ['_vehiclesList', '_waypointNumber'];
+params ['_trigger', '_vehiclesList'];
 
+_waypointNumber = [_trigger] call WRC_fnc_getWPNumber;
 _sectorNumber = [_waypointNumber] call WRC_fnc_getSectorNumber;
 
 {
 	_teamNumber = [_x] call WRC_fnc_getTeamNumber;
+	_lastWPNumber = [_teamNumber, 'lastWPNumber'] call WRC_fnc_getValueFromTeam;
+
+	if (_waypointNumber - _lastWPNumber > 1) exitWith {
+		{
+			['Предыдущий чекпоинт не пройден'] remoteExec ['hint', _x];
+		} forEach crew _x;
+	};
+
+	if (_waypointNumber - _lastWPNumber < 1) exitWith {
+		{
+			['Чекпоинт уже пойден'] remoteExec ['hint', _x];
+		} forEach crew _x;
+	};
+
 	[_teamNumber, 'lastWPNumber', _waypointNumber] call WRC_fnc_setValueToTeam;
 
 	if (_sectorNumber == 1) then {
