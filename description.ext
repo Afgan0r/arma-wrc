@@ -1,6 +1,6 @@
 class CfgFunctions {
 	class WRC {
-		class profileVariables {
+		class variables {
 			class initializeTeamValues {};
 			class setValueToTeam {};
 			class getValueFromTeam {};
