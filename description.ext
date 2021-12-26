@@ -20,5 +20,24 @@ class CfgFunctions {
 			class getTeamNumber {};
 			class getWPNumber {};
 		}
+		class sounds {
+			class playCheckpointPassed {};
+			class playWrongCheckpoint {};
+		}
+	}
+}
+
+class CfgSounds {
+	sounds[] = {};
+
+	class CheckpointPassed {
+		name = "checkpoint_passed";
+		sound[] = { "sounds\checkpoint.wss", 1, 1 };
+		titles[] = { };
+	};
+	class WrongCheckpoint {
+		name = "wrong_checkpoint";
+		sound[] = { "sounds\wrong_checkpoint.wss", 1, 1 };
+		titles[] = { };
 	}
 }

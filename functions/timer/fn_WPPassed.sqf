@@ -10,14 +10,20 @@ _sectorNumber = [_waypointNumber] call WRC_fnc_getSectorNumber;
 	if (_waypointNumber - _lastWPNumber > 1) exitWith {
 		{
 			['Предыдущий чекпоинт не пройден'] remoteExec ['hint', _x];
+			[WRC_fnc_playWrongCheckpoint] remoteExec ['call', _x];
 		} forEach crew _x;
 	};
 
 	if (_waypointNumber - _lastWPNumber < 1) exitWith {
 		{
 			['Чекпоинт уже пойден'] remoteExec ['hint', _x];
+			[WRC_fnc_playWrongCheckpoint] remoteExec ['call', _x];
 		} forEach crew _x;
 	};
+
+	{
+		[WRC_fnc_playCheckpointPassed] remoteExec ['call', _x];
+	} forEach crew _x;
 
 	[_teamNumber, 'lastWPNumber', _waypointNumber] call WRC_fnc_setValueToTeam;
 
