@@ -5,6 +5,11 @@ _triggerName = str _trigger;
 _isStart = _triggerName == 'start';
 _isFinish = _triggerName == 'finish';
 
+diag_log format [
+	"RALLY_LOG: wp_name: %1, start: %2, middle: %3, finish: %4",
+	_triggerName, _isStart, !(_isStart || _isFinish), _isFinish
+];
+
 // TODO: refactor branches
 
 if (_isStart) then {
