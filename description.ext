@@ -11,6 +11,9 @@ class CfgFunctions {
 		}
 		class timer {
 			class WPActivate {};
+			class startTimer {};
+			class WPPassed {};
+			class finishTimer {};
 		}
 		class utils {
 			class getSectorNumber {};
