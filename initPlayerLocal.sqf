@@ -1,0 +1,1 @@
+[start] call WRC_fnc_createLocalMarker;

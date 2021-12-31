@@ -25,6 +25,7 @@ class CfgFunctions {
 			class playWrongCheckpoint {};
 		}
 		class markers {
+			class createNextMarker {};
 			class createLocalMarker {};
 			class getMarkerName {};
 			class deleteLocalMarker {};
