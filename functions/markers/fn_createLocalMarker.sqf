@@ -29,7 +29,7 @@ switch (_type) do {
 };
 
 _marker = createMarkerLocal [[_WPTrigger] call WRC_fnc_getMarkerName, getPos _WPTrigger];
-_marker setMarkerShapeLocal "ICON";
+_marker setMarkerShapeLocal 'ICON';
 _marker setMarkerTypeLocal _markerType;
 _marker setMarkerColorLocal 'ColorRed';
 _marker setMarkerTextLocal _text;
